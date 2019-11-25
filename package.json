@@ -1,0 +1,14 @@
+{
+  "name": "<%= locals.name || 'ProjectName' %>",
+  "version": "1.0.0",
+  "description": "<%= locals.desc%>",
+  "repository": {
+    "type": "git",
+    "url": "<%= locals.gitAddr || '' %>"
+  },
+  "author": "<%= locals.author || '' %>",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
