@@ -1,12 +1,12 @@
 {
-  "name": "<%= locals.name || 'ProjectName' %>",
+  "name": "blank",
   "version": "1.0.0",
-  "description": "<%= locals.desc%>",
+  "description": "",
   "repository": {
     "type": "git",
-    "url": "<%= locals.gitAddr || '' %>"
+    "url": "git@git.cai-inc.com:f2e-cube/template/blank.git"
   },
-  "author": "<%= locals.author || '' %>",
+  "author": "浮云",
   "dependencies": {
   },
   "devDependencies": {
