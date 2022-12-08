@@ -1,18 +1,32 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
-import { UserInfo } from '@/interfaces/user';
-import { createModel } from 'ice';
+import { request } from 'ice';
 
-interface ModelState {
-  currentUser: UserInfo;
+interface IState {
+  name: string;
+  department: string;
+  avatar: string;
+  userid: number | null;
 }
 
-export default createModel({
+export default {
   state: {
-    currentUser: {},
-  } as ModelState,
+    name: 'default',
+    department: '',
+    avatar: '',
+    userid: null,
+  },
+
+  effects: (dispatch) => ({
+    async fetchUserProfile() {
+      const res = await request('/api/profile');
+      if (res.status === 'SUCCESS') {
+        dispatch.user.update(res.data);
+      }
+    },
+  }),
+
   reducers: {
-    updateCurrentUser(prevState: ModelState, payload) {
-      prevState.currentUser = payload;
+    update(prevState: IState, payload: IState) {
+      return { ...prevState, ...payload };
     },
   },
-});
+};

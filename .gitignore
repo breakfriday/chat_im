@@ -1,27 +1,24 @@
-# dependencies
-/node_modules
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# testing
-/coverage
+# dependencies
+node_modules/
 
 # production
-/build
+build/
+dist/
+tmp/
+lib/
 
 # misc
+.idea/
+.happypack
 .DS_Store
 *.swp
 *.dia~
+.ice
+.vscode
 
-# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-
-# local env files
-.env*.local
-
-# tmp
-.ice
-.faas_debug_tmp
-.severless
+index.module.scss.d.ts

@@ -1,12 +1,18 @@
 {
+  "compileOnSave": false,
+  "buildOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "module": "ESNext",
-    "target": "ESNext",
-    "lib": ["DOM", "ESNext", "DOM.Iterable"],
-    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "outDir": "build",
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "react",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "rootDir": "./",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -14,12 +20,14 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
     "skipLibCheck": true,
+    "types": ["node"],
     "paths": {
       "@/*": ["./src/*"],
       "ice": [".ice"]
     }
   },
   "include": ["src", ".ice"],
-  "exclude": ["build"]
+  "exclude": ["node_modules", "build", "public"]
 }

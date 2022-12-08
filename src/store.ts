@@ -1,6 +1,6 @@
 import { createStore } from 'ice';
-import user from '@/models/user';
+import user from './models/user';
 
-export default createStore({
-  user,
-});
+const store = createStore({ user });
+
+export default store;
