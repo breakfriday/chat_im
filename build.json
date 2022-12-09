@@ -1,5 +1,5 @@
 {
-  "vite": true,
+  "vite": false,
   "alias": {
     "venn.js": "venn.js/build/venn.js"
   },
