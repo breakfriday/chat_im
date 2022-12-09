@@ -1,11 +1,12 @@
-import { Outlet, Link, useLocation } from 'ice';
+import { Link, useLocation } from 'ice';
 import ProLayout from '@ant-design/pro-layout';
 import { asideMenuConfig } from '@/config/menuConfig';
 import AvatarDropdown from '@/components/AvatarDropdown';
 import store from '@/store';
-import logo from '@/assets/logo.png';
+
 import styles from './layout.module.css';
 import Footer from '@/components/Footer';
+import React from 'react';
 
 export default function Layout() {
   const location = useLocation();
@@ -19,14 +20,14 @@ export default function Layout() {
     <ProLayout
       menu={{ defaultOpenAll: true }}
       className={styles.layout}
-      logo={<img src={logo} alt="logo" />}
+      logo={<img src={} alt="logo" />}
       title="ICE Pro"
       location={{
         pathname: location.pathname,
       }}
       layout="mix"
       rightContentRender={() => (
-        <AvatarDropdown avatar={userState.currentUser.avatar} name={userState.currentUser.name} />
+       
       )}
       menuDataRender={() => asideMenuConfig}
       menuItemRender={(item, defaultDom) => {
@@ -36,8 +37,6 @@ export default function Layout() {
         return <Link to={item.path}>{defaultDom}</Link>;
       }}
       footerRender={() => <Footer />}
-    >
-      <Outlet />
-    </ProLayout>
+    />
   );
 }
