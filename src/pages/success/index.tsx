@@ -31,9 +31,16 @@ const initialMessages = [
   {
     type: 'image',
     content: {
-      picUrl: '//img.alicdn.com/tfs/TB1p_nirYr1gK0jSZR0XXbP8XXa-300-300.png',
+      picUrl: '//luban.zcycdn.com/file/jpg/56f1c41d-175e-4d1b-89ea-638b6396ff4a.jpg?x-oss-process=image/resize,l_600/quality,Q_80',
     },
+    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png' },
   },
+  {
+    type: 'text',
+    content: { text: "long long ago" },
+    position: 'right',
+    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png' },
+  }
 ];
 
 function renderMessageContent(msg) {
