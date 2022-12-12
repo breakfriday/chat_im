@@ -14,6 +14,10 @@ const asideMenuConfig = [
         path: '/chat_page',
       },
       {
+        name: '商家消息页',
+        path: '/success_page',
+      },
+      {
         name: '其他',
         path: '/',
         children: [
