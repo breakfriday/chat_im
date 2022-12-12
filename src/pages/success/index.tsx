@@ -74,7 +74,7 @@ export default function chat_box() {
       setTimeout(() => {
         appendMsg({
           type: 'text',
-          content: { text: '亲，您遇到什么问题啦？请简要描述您的问题~' },
+          content: { text: '亲，hello test' },
         });
       }, 1000);
     }
