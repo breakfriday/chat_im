@@ -25,7 +25,7 @@ const defaultQuickReplies = [
 const initialMessages = [
   {
     type: 'text',
-    content: { text: '主人好，我是智能助理，你的贴心小助手~' },
+    content: { text: 'hello this is the test' },
     user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png' },
   },
   {
@@ -58,6 +58,35 @@ export default function chat_box() {
 
   const { messages, appendMsg, setTyping } = useMessages(initialMessages);
 
+   // 发送回调
+   function handleSend(type, val) {
+    if (type === 'text' && val.trim()) {
+      // TODO: 发送请求
+      appendMsg({
+        type: 'text',
+        content: { text: val },
+        position: 'right',
+      });
+
+      setTyping(true);
+
+      // 模拟回复消息
+      setTimeout(() => {
+        appendMsg({
+          type: 'text',
+          content: { text: '亲，您遇到什么问题啦？请简要描述您的问题~' },
+        });
+      }, 1000);
+    }
+  }
+
+  // 快捷短语回调，可根据 item 数据做出不同的操作，这里以发送文本消息为例
+  function handleQuickReplyClick(item) {
+    alert(33)
+    debugger
+    handleSend('text', item.name);
+  }
+
   return (
     <Card bordered={false}>
   
@@ -66,6 +95,8 @@ export default function chat_box() {
         messages={messages}
         renderMessageContent={renderMessageContent}
         quickReplies={defaultQuickReplies}
+        onQuickReplyClick={handleQuickReplyClick}
+        onSend={handleSend}
       />
     </Card>
   );
