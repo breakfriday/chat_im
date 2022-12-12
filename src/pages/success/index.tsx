@@ -82,8 +82,7 @@ export default function chat_box() {
 
   // 快捷短语回调，可根据 item 数据做出不同的操作，这里以发送文本消息为例
   function handleQuickReplyClick(item) {
-    alert(33)
-    debugger
+   
     handleSend('text', item.name);
   }
 
