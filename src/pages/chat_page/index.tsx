@@ -28,7 +28,13 @@ const initialMessages: MessageWithoutId[] = [
   {
     type: 'text',
     content: { text: 'hello this is the test' },
-    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png' },
+    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: 'hello' },
+    createdAt: Date.now(),
+    hasTime: true,
+  },
+  {
+    type: 'system',
+    content: { text: '88VIP专属智能客服小蜜 为您服务' },
   },
   {
     type: 'image',
@@ -42,6 +48,12 @@ const initialMessages: MessageWithoutId[] = [
     content: { text: 'long long ago' },
     position: 'right',
     user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png' },
+  },
+  {
+    type: 'system',
+    content: {
+      text: '由于您长时间未说话或退出小蜜（离开页面、锁屏等）已自动结束本次服务',
+    },
   },
 ];
 
