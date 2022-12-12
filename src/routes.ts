@@ -17,7 +17,7 @@ const routerConfig: IRouterConfig[] = [
 
       {
         path: '/',
-        redirect: '/dashboard/analysis',
+        redirect: '/success_page',
       },
     ],
   },
