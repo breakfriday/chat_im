@@ -4,6 +4,8 @@ import BasicLayout from '@/layouts/BasicLayout';
 
 import success_page from '@/pages/success';
 
+import chat_page from '@/pages/chat_page';
+
 const routerConfig: IRouterConfig[] = [
 
   {
@@ -14,11 +16,16 @@ const routerConfig: IRouterConfig[] = [
         path: '/success_page',
         component: success_page,
       },
+      {
+        path: '/chat_page ',
+        component: chat_page,
+      },
 
       {
         path: '/',
-        redirect: '/success_page',
+        redirect: '/chat_page ',
       },
+
     ],
   },
 ];
