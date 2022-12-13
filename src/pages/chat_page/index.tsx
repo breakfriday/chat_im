@@ -148,7 +148,14 @@ function renderMessageContent(msg: MessageProps) {
             <FlexItem>
               <List>
                 <ListItem content="只是一?" as="a" rightIcon="chevron-right" />
-                <ListItem content="问题2?" as="a" rightIcon="chevron-right" />
+                <ListItem
+                  content="问题2?"
+                  as="a"
+                  rightIcon="chevron-right"
+                  onClick={() => {
+                    alert("are you ok");
+                  }}
+                />
                 <ListItem content="如何修改评价?" as="a" rightIcon="chevron-right" />
                 <ListItem content="物流问题咨询" as="a" rightIcon="chevron-right" />
               </List>
