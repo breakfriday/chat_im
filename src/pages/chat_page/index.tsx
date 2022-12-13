@@ -12,6 +12,7 @@ import Chat, { Bubble, useMessages,
   ScrollView,
   ToolbarItemProps } from '@chatui/core';
 import React from 'react';
+import store from '@/store';
 
 type MessageWithoutId = Omit<MessageProps, '_id'>;
 
@@ -153,7 +154,7 @@ function renderMessageContent(msg: MessageProps) {
                   as="a"
                   rightIcon="chevron-right"
                   onClick={() => {
-                    alert("are you ok");
+                    alert('are you ok');
                   }}
                 />
                 <ListItem content="如何修改评价?" as="a" rightIcon="chevron-right" />
@@ -191,6 +192,7 @@ function renderMessageContent(msg: MessageProps) {
 }
 
 export default function chat_box() {
+  const [chatState, chatDispatchers] = store.useModel('chat_model');
   const { messages, appendMsg, setTyping, prependMsgs } = useMessages(initialMessages);
 
   // 发送回调
@@ -222,6 +224,12 @@ export default function chat_box() {
 
   return (
     <Card bordered={false}>
+
+      <div onClick={() => {
+        chatDispatchers.connet_chat();
+      }}
+      >ss
+      </div>
 
       <Chat
         navbar={{ title: 'im 客满' }}

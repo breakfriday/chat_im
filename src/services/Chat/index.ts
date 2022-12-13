@@ -6,20 +6,23 @@ const { appkey, account, token } = im_config;
 
 class chat_srvice {
   constructor() {
+    debugger;
     return this.login_chat();
   }
 
   login_chat() {
     this.chat = new NIMSDK({
-      appkey,
-      account,
-      token,
+      appkey: 'eba72c1eb597474226e0b49c8b23073c',
+      account: 'test3',
+      token: '631eaa4af8bb8118917573984d8f9dd9',
       debugLevel: 'debug',
     });
-
+    this.chat.connect();
     return this.chat;
     // this.chat.connect();
   }
+
+  // {"code":200,"info":{"name":"","accid":"test3","token":"c11ab2f47a2a0bb04848c66c780e88e4"}}
 
   addevent() {
     const eventList = [
@@ -59,6 +62,12 @@ class chat_srvice {
       //   'updateTeamMember',
       //   'updateTeam', 'addTeamMembers', 'updateTeamManagers', 'transferTeam', 'removeTeamMembers', 'dismissTeam', 'updateTeamMembersMute',
     ];
+
+    eventList.forEach((key: any) => {
+      this.chat.on(key, (res) => {
+        console.log(`Receive ${key} event：`, res ? JSON.parse(JSON.stringify(res)) : res);
+      });
+    });
   }
 }
 

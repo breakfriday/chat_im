@@ -10,6 +10,8 @@ export default {
   effects: (dispatch) => ({
     async connet_chat() {
       const chat = new chat_service();
+
+      
     },
 
   }),
