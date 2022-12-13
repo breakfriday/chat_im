@@ -147,8 +147,8 @@ function renderMessageContent(msg: MessageProps) {
             </div>
             <FlexItem>
               <List>
-                <ListItem content="我的红包退款去哪里?" as="a" rightIcon="chevron-right" />
-                <ListItem content="我的红包退款去哪里?" as="a" rightIcon="chevron-right" />
+                <ListItem content="只是一?" as="a" rightIcon="chevron-right" />
+                <ListItem content="问题2?" as="a" rightIcon="chevron-right" />
                 <ListItem content="如何修改评价?" as="a" rightIcon="chevron-right" />
                 <ListItem content="物流问题咨询" as="a" rightIcon="chevron-right" />
               </List>
