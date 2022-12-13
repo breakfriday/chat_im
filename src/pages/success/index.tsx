@@ -97,7 +97,7 @@ export default function chat_box() {
     <Card bordered={false}>
 
       <Chat
-        navbar={{ title: 'im 助理' }}
+        navbar={{ title: '商家消息页' }}
         messages={messages}
         renderMessageContent={renderMessageContent}
         quickReplies={defaultQuickReplies}
