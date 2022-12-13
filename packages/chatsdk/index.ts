@@ -8,23 +8,35 @@ const nim = new NIMSDK({
 });
 
 const eventList = [
+  // 登陆完成事件
   'logined',
 
+  // 收到多端登陆通知触发事件
   'multiPortLogin',
 
+  // 被踢
   'kicked',
 
+  // 即将开始重连,
   'willReconnect',
 
+  // 断开连接
   'disconnect',
 
+  // 收到消息
   'msg',
 
+  // 同步完成事件
   'syncdone',
 
-  'proxyMsg', 'syncRoamingMsgs', 'syncOfflineMsgs',
+  // 在线时收到了系统通知
+  'sysMsg',
+
+  'proxyMsg',
+  'syncRoamingMsgs',
+  'syncOfflineMsgs',
   'syncMyNameCard', 'syncdone', 'sessions', 'updateMyNameCard', 'updateBlackList', 'updateMuteList',
-  'sysMsg', 'syncSysMsgs', 'syncFriend', 'friends', 'users', 'updateSystemMessages', 'sysMsgUnread', 'pushEvents',
+  'syncSysMsgs', 'syncFriend', 'friends', 'users', 'updateSystemMessages', 'sysMsgUnread', 'pushEvents',
   'teamMsgReceipts', 'updateSession',
 
   'teams',
