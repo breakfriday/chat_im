@@ -1,9 +1,13 @@
+
 import NIMSDK from 'nim-web-sdk-ng/dist/NIM_BROWSER_SDK';
+import { im_config } from '@/config/test_im_config';
+
+const { appkey, account, token } = im_config;
 
 const nim = new NIMSDK({
-  appkey: 'YOUR_APPKEY',
-  account: 'YOUR_ACCID',
-  token: 'YOUR_TOKEN',
+  appkey,
+  account,
+  token,
   debugLevel: 'debug',
 });
 
@@ -53,3 +57,4 @@ eventList.forEach((key: any) => {
 
 // then，receive event 'logined'
 nim.connect();
+
