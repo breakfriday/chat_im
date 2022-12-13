@@ -18,6 +18,7 @@ class chat_srvice {
       debugLevel: 'debug',
     });
     this.chat.connect();
+    this.addevent();
     return this.chat;
     // this.chat.connect();
   }
@@ -65,6 +66,12 @@ class chat_srvice {
 
     eventList.forEach((key: any) => {
       this.chat.on(key, (res) => {
+        console.log('=====dph======');
+
+        if (key === 'msg') {
+          alert(JSON.stringify(res));
+        }
+
         console.log(`Receive ${key} event：`, res ? JSON.parse(JSON.stringify(res)) : res);
       });
     });
