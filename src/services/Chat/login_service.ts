@@ -56,5 +56,8 @@ eventList.forEach((key: any) => {
 });
 
 // then，receive event 'logined'
-nim.connect();
+// nim.connect();
+
+
+export default nim;
 
