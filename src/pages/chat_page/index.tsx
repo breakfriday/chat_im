@@ -1,18 +1,13 @@
 import { Button, Card, Result } from 'antd';
-import Chat, { Bubble, useMessages,
-  MessageProps,
-  QuickReplyItemProps,
-  useQuickReplies,
-  CardTitle,
-  CardText,
-  List,
-  ListItem,
-  Flex,
-  FlexItem,
-  ScrollView,
-  ToolbarItemProps } from '@chatui/core';
+
 import React from 'react';
 import store from '@/store';
+
+
+import { Chat } from '../../../packages/chatui/components/Chat';
+import { Bubble } from '../../../packages/chatui/components/Bubble';
+import { MessageProps } from '../../../packages/chatui/components/Message';
+import useMessages from '../../../packages/chatui//hooks/useMessages';
 
 type MessageWithoutId = Omit<MessageProps, '_id'>;
 
@@ -85,10 +80,10 @@ const initialMessages: MessageWithoutId[] = [
     createdAt: Date.now(),
     hasTime: true,
   },
-  {
-    type: 'guess-you',
-    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: '机器人' },
-  },
+  // {
+  //   type: 'guess-you',
+  //   user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: '机器人' },
+  // },
   {
     type: 'system',
     content: { text: '88VIP专属智能客服小蜜 为您服务' },
@@ -141,45 +136,30 @@ function renderMessageContent(msg: MessageProps) {
       return <Bubble content={content.text} />;
     case 'guess-you':
       return (
-        <Card fluid>
-          <Flex>
-            <div className="guess-you-aside">
-              <h1>猜你想问</h1>
-            </div>
-            <FlexItem>
-              <List>
-                <ListItem content="只是一?" as="a" rightIcon="chevron-right" />
-                <ListItem
-                  content="问题2?"
-                  as="a"
-                  rightIcon="chevron-right"
-                  onClick={() => {
-                    alert('are you ok');
-                  }}
-                />
-                <ListItem content="如何修改评价?" as="a" rightIcon="chevron-right" />
-                <ListItem content="物流问题咨询" as="a" rightIcon="chevron-right" />
-              </List>
-            </FlexItem>
-          </Flex>
+        <Card >
+
+          <div className="guess-you-aside">
+            <h1>猜你想问</h1>
+          </div>
+
         </Card>
       );
-    case 'skill-cards':
-      return (
-        <ScrollView
-          className="skill-cards"
-          data={skillList}
-          fullWidth
-          renderItem={(item) => (
-            <Card>
-              <CardTitle>{item.title}</CardTitle>
-              <CardText>{item.desc}</CardText>
-            </Card>
-          )}
-        />
-      );
-    case 'order-selector':
-      return <OrderSelector />;
+    // case 'skill-cards':
+    //   return (
+    //     <ScrollView
+    //       className="skill-cards"
+    //       data={skillList}
+    //       fullWidth
+    //       renderItem={(item) => (
+    //         <Card>
+    //           <CardTitle>{item.title}</CardTitle>
+    //           <CardText>{item.desc}</CardText>
+    //         </Card>
+    //       )}
+    //     />
+    //   );
+    // case 'order-selector':
+    //   return <OrderSelector />;
     case 'image':
       return (
         <Bubble type="image">
