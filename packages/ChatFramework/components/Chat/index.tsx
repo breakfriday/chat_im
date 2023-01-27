@@ -11,136 +11,136 @@ import { Composer as DComposer, ComposerProps, ComposerHandle } from '../Compose
 import { isSafari, getIOSMajorVersion } from '../../utils/ua';
 
 export type ChatProps = Omit<ComposerProps, 'onFocus' | 'onChange' | 'onBlur'> &
-  MessageContainerProps & {
-    /**
+MessageContainerProps & {
+  /**
      * 宽版模式断点
      */
-    // wideBreakpoint?: string;
-    /**
+  // wideBreakpoint?: string;
+  /**
      * 当前语言
      */
-    locale?: string;
-    /**
+  locale?: string;
+  /**
      * 多语言
      */
-    locales?: any; // FIXME
-    /**
+  locales?: any; // FIXME
+  /**
      * 导航栏配置
      */
-    navbar?: NavbarProps;
-    /**
+  navbar?: NavbarProps;
+  /**
      * 导航栏渲染函数
      */
-    renderNavbar?: () => React.ReactNode;
-    /**
+  renderNavbar?: () => React.ReactNode;
+  /**
      * 加载更多文案
      */
-    // loadMoreText?: string;
-    /**
+  // loadMoreText?: string;
+  /**
      * 在消息列表上面的渲染函数
      */
-    // renderBeforeMessageList?: () => React.ReactNode;
-    /**
+  // renderBeforeMessageList?: () => React.ReactNode;
+  /**
      * 消息列表 ref
      */
-    messagesRef?: React.RefObject<MessageContainerHandle>;
-    /**
+  messagesRef?: React.RefObject<MessageContainerHandle>;
+  /**
      * 下拉加载回调
      */
-    // onRefresh?: () => Promise<any>;
-    /**
+  // onRefresh?: () => Promise<any>;
+  /**
      * 滚动消息列表回调
      */
-    // onScroll?: (event: React.UIEvent<HTMLDivElement, UIEvent>) => void;
-    /**
+  // onScroll?: (event: React.UIEvent<HTMLDivElement, UIEvent>) => void;
+  /**
      * 消息列表
      */
-    // messages: MessageProps[];
-    /**
+  // messages: MessageProps[];
+  /**
      * 消息内容渲染函数
      */
-    // renderMessageContent: (message: MessageProps) => React.ReactNode;
-    /**
+  // renderMessageContent: (message: MessageProps) => React.ReactNode;
+  /**
      * 快捷短语
      */
-    quickReplies?: QuickReplyItemProps[];
-    /**
+  quickReplies?: QuickReplyItemProps[];
+  /**
      * 快捷短语是否可见
      */
-    quickRepliesVisible?: boolean;
-    /**
+  quickRepliesVisible?: boolean;
+  /**
      * 快捷短语的点击回调
      */
-    onQuickReplyClick?: (item: QuickReplyItemProps, index: number) => void;
-    /**
+  onQuickReplyClick?: (item: QuickReplyItemProps, index: number) => void;
+  /**
      * 快捷短语的滚动回调
      */
-    onQuickReplyScroll?: () => void;
-    /**
+  onQuickReplyScroll?: () => void;
+  /**
      * 快捷短语渲染函数
      */
-    renderQuickReplies?: () => void;
-    /**
+  renderQuickReplies?: () => void;
+  /**
      * 输入区 ref
      */
-    composerRef?: React.RefObject<ComposerHandle>;
-    /**
+  composerRef?: React.RefObject<ComposerHandle>;
+  /**
      * 输入框初始内容
      */
-    // text?: string;
-    /**
+  // text?: string;
+  /**
      * 输入框占位符
      */
-    // placeholder?: string;
-    /**
+  // placeholder?: string;
+  /**
      * 输入框聚焦回调
      */
-    onInputFocus?: ComposerProps['onFocus'];
-    /**
+  onInputFocus?: ComposerProps['onFocus'];
+  /**
      * 输入框更新回调
      */
-    onInputChange?: ComposerProps['onChange'];
-    /**
+  onInputChange?: ComposerProps['onChange'];
+  /**
      * 输入框失去焦点回调
      */
-    onInputBlur?: ComposerProps['onBlur'];
-    /**
+  onInputBlur?: ComposerProps['onBlur'];
+  /**
      * 发送消息回调
      */
-    // onSend: (type: string, content: string) => void;
-    /**
+  // onSend: (type: string, content: string) => void;
+  /**
      * 发送图片回调
      */
-    // onImageSend?: (file: File) => Promise<any>;
-    /**
+  // onImageSend?: (file: File) => Promise<any>;
+  /**
      * 输入方式
      */
-    // inputType?: InputType;
-    /**
+  // inputType?: InputType;
+  /**
      * 输入方式切换回调
      */
-    // onInputTypeChange?: () => void;
-    /**
+  // onInputTypeChange?: () => void;
+  /**
      * 语音输入
      */
-    // recorder?: RecorderProps;
-    /**
+  // recorder?: RecorderProps;
+  /**
      * 工具栏
      */
-    // toolbar?: ToolbarItemProps[];
-    /**
+  // toolbar?: ToolbarItemProps[];
+  /**
      * 点击工具栏回调
      */
-    // onToolbarClick?: () => void;
-    /**
+  // onToolbarClick?: () => void;
+  /**
      * 点击附加内容回调
      */
-    // onAccessoryToggle?: () => void;
-    /**
+  // onAccessoryToggle?: () => void;
+  /**
      * 输入组件
      */
-    Composer?: React.ElementType; // FIXME
-  };
+  Composer?: React.ElementType; // FIXME
+};
 
 export const Chat = React.forwardRef<HTMLDivElement, ChatProps>((props, ref) => {
   const {
