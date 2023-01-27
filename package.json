@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "yarn start:ice",
-    "start:ice": "yarn workspace @alifd/scaffold-simple start",
+    "start:ice": "yarn workspace @alifd/scaffold-simple start"
  
   },
   "repository": {
