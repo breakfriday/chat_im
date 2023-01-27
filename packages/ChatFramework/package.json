@@ -13,7 +13,6 @@
     "@ant-design/pro-table": "^3.0.17",
     "ahooks": "^2.0.0",
     "antd": "^4.24.0",
-
     "lodash.debounce": "^4.0.8",
     "moment": "^2.24.0",
     "nim-web-sdk-ng": "^0.9.2",
@@ -23,7 +22,13 @@
     "react-intl": "^2.8.0",
     "react-sortablejs": "^5.0.0",
     "sortablejs": "^1.12.0",
-    "zone.js": "^0.12.0"
+    "zone.js": "^0.12.0",
+    "@babel/runtime": "^7.18.3",
+    "@babel/runtime-corejs3": "^7.18.3",
+    "clsx": "^1.1.1",
+    "core-js": "^3.23.1",
+    "dompurify": "^2.3.8",
+    "intersection-observer": "^0.12.2"
   },
   "devDependencies": {
 
