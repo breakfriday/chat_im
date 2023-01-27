@@ -80,10 +80,10 @@ const initialMessages: MessageWithoutId[] = [
     createdAt: Date.now(),
     hasTime: true,
   },
-  // {
-  //   type: 'guess-you',
-  //   user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: '机器人' },
-  // },
+  {
+    type: 'guess-you',
+    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: '机器人' },
+  },
   {
     type: 'system',
     content: { text: '88VIP专属智能客服小蜜 为您服务' },
