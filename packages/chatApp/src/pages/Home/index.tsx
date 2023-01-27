@@ -99,7 +99,7 @@ const initialMessages: MessageWithoutId[] = [
     type: 'text',
     content: { text: 'long long ago' },
     position: 'right',
-    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png' },
+    user: { avatar: 'https://p3.itc.cn/images01/20220411/deee03a2c746403882ab0ab0a28550ae.jpeg' },
   },
   {
     type: 'system',
@@ -182,7 +182,7 @@ export default function chat_box() {
       appendMsg({
         type: 'text',
         content: { text: val },
-        user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: 'hello' },
+        user: { avatar: 'https://p3.itc.cn/images01/20220411/deee03a2c746403882ab0ab0a28550ae.jpeg', name: 'hello' },
         position: 'right',
       });
 
@@ -193,7 +193,7 @@ export default function chat_box() {
         appendMsg({
           type: 'text',
           content: { text: '亲，hello test' },
-          user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: 'robot' },
+          user: { avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0phtaGaO9_-Qqx7TNCpWN9NoHLG9X5T58Q&usqp=CAU', name: 'robot' },
         });
       }, 1000);
     }
