@@ -1,8 +1,0 @@
-.link a {
-  display: inline-block;
-  width: 40px;
-  line-height: 50px;
-  text-align: center;
-  cursor: pointer;
-  color: var(--color-white, #fff);
-}

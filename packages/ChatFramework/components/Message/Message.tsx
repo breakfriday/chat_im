@@ -1,9 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import { SystemMessage } from './SystemMessage';
+import { IMessageStatus } from '../MessageStatus';
 import { Avatar } from '../Avatar';
-
-export type IMessageStatus = 'pending' | 'sent' | 'fail';
+import { Time } from '../Time';
+import { Typing } from '../Typing';
 
 export interface User {
   avatar?: string;
@@ -66,13 +67,17 @@ const Message = (props: MessageProps) => {
 
   return (
     <div className={clsx('Message', position)} data-id={id} data-type={type}>
-
+      {hasTime && createdAt && (
+        <div className="Message-meta">
+          <Time date={createdAt} />
+        </div>
+      )}
       <div className="Message-main">
         {isRL && avatar && <Avatar src={avatar} alt={name} url={user.url} />}
         <div className="Message-inner">
           {isRL && name && <div className="Message-author">{name}</div>}
           <div className="Message-content" role="alert" aria-live="assertive" aria-atomic="false">
-            {type === 'typing' ? <span>...</span> : renderMessageContent(msg)}
+            {type === 'typing' ? <Typing /> : renderMessageContent(msg)}
           </div>
         </div>
       </div>

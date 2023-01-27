@@ -7,15 +7,11 @@
   ],
   "description": "chat ",
   "dependencies": {
-   
-  },
-  "devDependencies": {
-  
+    "create-ice": "^1.7.5"
   },
   "scripts": {
     "start": "yarn start:chatApp",
     "start:chatApp": "yarn workspace chatApp start"
- 
   },
   "repository": {
     "type": "git",

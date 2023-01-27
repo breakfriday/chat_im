@@ -30,7 +30,8 @@ export function lazyComponent(
           fail(err);
         }
         return { default: () => <></> };
-      }));
+      }),
+  );
 
   return ret;
 }
