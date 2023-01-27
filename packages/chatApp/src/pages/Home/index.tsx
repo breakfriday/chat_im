@@ -76,24 +76,24 @@ const initialMessages: MessageWithoutId[] = [
   {
     type: 'text',
     content: { text: 'hello this is the test' },
-    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: 'hello' },
+    user: { avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0phtaGaO9_-Qqx7TNCpWN9NoHLG9X5T58Q&usqp=CAU', name: 'robot' },
     createdAt: Date.now(),
     hasTime: true,
   },
   {
     type: 'guess-you',
-    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: '机器人' },
+    user: { avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0phtaGaO9_-Qqx7TNCpWN9NoHLG9X5T58Q&usqp=CAU', name: 'robot' },
   },
   {
     type: 'system',
-    content: { text: '88VIP专属智能客服小蜜 为您服务' },
+    content: { text: '智能机器人接入' },
   },
   {
     type: 'image',
     content: {
       picUrl: '//luban.zcycdn.com/file/jpg/56f1c41d-175e-4d1b-89ea-638b6396ff4a.jpg?x-oss-process=image/resize,l_600/quality,Q_80',
     },
-    user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png' },
+    user: { avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0phtaGaO9_-Qqx7TNCpWN9NoHLG9X5T58Q&usqp=CAU', name: 'robot' },
   },
   {
     type: 'text',
@@ -182,6 +182,7 @@ export default function chat_box() {
       appendMsg({
         type: 'text',
         content: { text: val },
+        user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: 'hello' },
         position: 'right',
       });
 
@@ -192,6 +193,7 @@ export default function chat_box() {
         appendMsg({
           type: 'text',
           content: { text: '亲，hello test' },
+          user: { avatar: '//sitecdn.zcycdn.com/f2e-assets/f2621c89-8e31-4f23-b3a1-9cc5e90b97ab.png', name: 'robot' },
         });
       }, 1000);
     }
