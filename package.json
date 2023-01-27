@@ -5,51 +5,20 @@
   "workspaces": [
     "packages/*"
   ],
-  "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
+  "description": "chat ",
   "dependencies": {
-    "@alifd/next": "^1.21.0",
-    "@alifd/theme-design-pro": "0.x",
-    "@ant-design/charts": "^1.4.2",
-    "@ant-design/icons": "^4.7.0",
-    "@ant-design/pro-form": "^2.2.8",
-    "@ant-design/pro-layout": "^7.1.6",
-    "@ant-design/pro-table": "^3.0.17",
-    "@chatui/core": "^2.4.2",
-    "ahooks": "^2.0.0",
-    "antd": "^4.24.0",
-    "bizcharts": "^3.5.6",
-    "lodash.debounce": "^4.0.8",
-    "moment": "^2.24.0",
-    "nim-web-sdk-ng": "^0.9.2",
-    "prop-types": "^15.5.8",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-intl": "^2.8.0",
-    "react-sortablejs": "^5.0.0",
-    "sortablejs": "^1.12.0",
-    "zone.js": "^0.12.0"
+   
   },
   "devDependencies": {
-    "@iceworks/spec": "^1.0.0",
-    "build-plugin-moment-locales": "^0.1.0",
-    "eslint": "^7.30.0",
-    "ice.js": "^2.0.0",
-    "stylelint": "^13.2.0",
-    "build-plugin-ignore-style": "^0.1.0",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2"
+  
   },
   "scripts": {
-    "start": "icejs start",
-    "build": "icejs build",
-    "lint": "npm run eslint && npm run stylelint",
-    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "eslint:fix": "npm run eslint -- --fix",
-    "stylelint": "stylelint \"**/*.{css,scss,less}\""
+    "start": "yarn start:ice",
+    "start:ice": "yarn workspace @alifd/scaffold-simple start",
+ 
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/fusion-design-pro"
-  },
-  "originTemplate": "@alifd/fusion-design-pro"
+  }
 }
