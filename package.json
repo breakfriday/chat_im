@@ -1,6 +1,10 @@
 {
   "name": "@alifd/fusion-design-pro",
   "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
   "dependencies": {
     "@alifd/next": "^1.21.0",
@@ -47,6 +51,5 @@
     "type": "git",
     "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/fusion-design-pro"
   },
-  "private": true,
   "originTemplate": "@alifd/fusion-design-pro"
 }
