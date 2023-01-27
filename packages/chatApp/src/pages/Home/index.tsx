@@ -210,7 +210,7 @@ export default function chat_box() {
       <div onClick={() => {
         chatDispatchers.connet_chat();
       }}
-      >ss
+      >CONNECT  SOCKET
       </div>
 
       <Chat
